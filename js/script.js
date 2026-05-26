@@ -90,3 +90,49 @@ const translations = {
         btn_cuenta: 'I already have an account'
     }
 };
+
+let currentLang = 'es';
+
+function applyTranslations(lang) {
+    const t = translations[lang];
+    document.querySelector('.nav-links li:nth-child(1) a').textContent = t.nav_beneficios;
+    document.querySelector('.nav-links li:nth-child(2) a').textContent = t.nav_planes;
+    document.querySelector('.nav-links li:nth-child(3) a').textContent = t.nav_contacto;
+    document.querySelector('.btn-login').textContent = t.btn_login;
+    document.querySelector('.btn-register').textContent = t.btn_register;
+    document.querySelector('.hero-badge').textContent = t.hero_badge;
+    document.querySelector('.hero-content h1').innerHTML = t.hero_title;
+    document.querySelector('.hero-content p').textContent = t.hero_desc;
+    document.querySelector('.btn-primary').textContent = t.btn_planes;
+    document.querySelector('.btn-secondary').textContent = t.btn_explorar;
+    document.querySelectorAll('.stat-label')[0].textContent = t.stat1_label;
+    document.querySelectorAll('.stat-label')[1].textContent = t.stat2_label;
+    document.querySelectorAll('.stat-label')[2].textContent = t.stat3_label;
+    document.querySelector('.hero-scroll span').textContent = t.hero_scroll;
+    document.querySelector('.section-tag').textContent = t.benefits_tag;
+    document.querySelector('.benefits-section h2').textContent = t.benefits_title;
+    document.querySelector('.benefits-section p').textContent = t.benefits_desc;
+    document.querySelector('.plans-section .section-tag').textContent = t.plans_tag;
+    document.querySelector('.plans-section h2').textContent = t.plans_title;
+    document.querySelector('.plans-section .section-header p').textContent = t.plans_desc;
+    document.querySelector('.cta-inner h2').textContent = t.cta_title;
+    document.querySelector('.cta-inner p').textContent = t.cta_desc;
+    document.querySelector('.btn-primary.large').textContent = t.btn_comenzar;
+    document.querySelector('.btn-secondary.large').textContent = t.btn_cuenta;
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    currentLang = lang;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const langSwitcher = document.querySelector('.lang-switcher');
+    if (langSwitcher) {
+        langSwitcher.addEventListener('click', (e) => {
+            const btn = e.target.closest('.lang-btn');
+            if (btn) applyTranslations(btn.dataset.lang);
+        });
+    }
+});
