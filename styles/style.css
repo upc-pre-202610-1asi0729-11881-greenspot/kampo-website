@@ -914,3 +914,29 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 16px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.lang-btn.active{
+    opacity: 1;
+}
+
+.lang-btn:hover{
+    opacity: 1;
+}
