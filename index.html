@@ -123,76 +123,86 @@
         </div>
     </section>
 
-    <section id="planes" class="section plans-section">
-        <div class="section-header">
-            <span class="section-tag">Membresías</span>
-            <h2>Elige el plan para tu operación</h2>
-            <p>Desde pequeños productores hasta grandes agroindustrias</p>
+   <section id="planes" class="section plans-section">
+    <div class="section-header">
+        <span class="section-tag">Membresías</span>
+        <h2>Elige el plan para tu operación</h2>
+        <p>Desde pequeños productores hasta grandes agroindustrias</p>
+    </div>
+
+    <div class="billing-toggle">
+        <span class="toggle-label" id="label-mensual">Mensual</span>
+        <label class="switch">
+            <input type="checkbox" id="billingToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="toggle-label" id="label-anual">Anual <span class="save-badge">Ahorra 17%</span></span>
+    </div>
+
+    <div class="plans-grid">
+        <div class="plan-card">
+            <div class="plan-header">
+                <span class="plan-icon">🌱</span>
+                <h3>Semilla</h3>
+                <p class="plan-desc">Ideal para comenzar</p>
+            </div>
+            <div class="plan-price">
+                <span class="currency">S/.</span>
+                <span class="amount" id="price-semilla">20</span>
+                <span class="period" id="period-semilla">/mes</span>
+            </div>
+            <ul class="plan-features">
+                <li>✓ 1 Fundo</li>
+                <li>✓ Alertas Básicas</li>
+                <li>✓ Gestión de Temporadas</li>
+                <li class="disabled">✗ Integración IoT</li>
+                <li class="disabled">✗ Reportes PDF</li>
+            </ul>
+            <a href="https://buy.stripe.com/test_8x2bJ00MO1lvaqs1ls6EU00" class="btn-plan outline" id="btn-semilla">Elegir Semilla</a>
         </div>
-        <div class="plans-grid">
-            <div class="plan-card">
-                <div class="plan-header">
-                    <span class="plan-icon">🌱</span>
-                    <h3>Semilla</h3>
-                    <p class="plan-desc">Ideal para comenzar</p>
-                </div>
-                <div class="plan-price">
-                    <span class="currency">S/.</span>
-                    <span class="amount">20</span>
-                    <span class="period">/mes</span>
-                </div>
-                <ul class="plan-features">
-                    <li>✓ 1 Fundo</li>
-                    <li>✓ Alertas Básicas</li>
-                    <li>✓ Gestión de Temporadas</li>
-                    <li class="disabled">✗ Integración IoT</li>
-                    <li class="disabled">✗ Reportes PDF</li>
-                </ul>
-                <a href="https://witty-coast-0b3ee6c0f.7.azurestaticapps.net/profile-access/register" class="btn-plan outline">Elegir Semilla</a>
+        <div class="plan-card featured">
+            <div class="plan-badge">Más Popular</div>
+            <div class="plan-header">
+                <span class="plan-icon">🌾</span>
+                <h3>Cosecha</h3>
+                <p class="plan-desc">Para operaciones en crecimiento</p>
             </div>
-            <div class="plan-card featured">
-                <div class="plan-badge">Más Popular</div>
-                <div class="plan-header">
-                    <span class="plan-icon">🌾</span>
-                    <h3>Cosecha</h3>
-                    <p class="plan-desc">Para operaciones en crecimiento</p>
-                </div>
-                <div class="plan-price">
-                    <span class="currency">S/.</span>
-                    <span class="amount">45</span>
-                    <span class="period">/mes</span>
-                </div>
-                <ul class="plan-features">
-                    <li>✓ 3 Fundos</li>
-                    <li>✓ Integración IoT</li>
-                    <li>✓ Reportes PDF</li>
-                    <li>✓ Gestión Financiera</li>
-                    <li>✓ Control de Inventario</li>
-                </ul>
-                <a href="https://witty-coast-0b3ee6c0f.7.azurestaticapps.net/profile-access/register" class="btn-plan primary">Elegir Cosecha</a>
+            <div class="plan-price">
+                <span class="currency">S/.</span>
+                <span class="amount" id="price-cosecha">45</span>
+                <span class="period" id="period-cosecha">/mes</span>
             </div>
-            <div class="plan-card">
-                <div class="plan-header">
-                    <span class="plan-icon">🏡</span>
-                    <h3>Hacienda</h3>
-                    <p class="plan-desc">Para grandes agroindustrias</p>
-                </div>
-                <div class="plan-price">
-                    <span class="currency">S/.</span>
-                    <span class="amount">95</span>
-                    <span class="period">/mes</span>
-                </div>
-                <ul class="plan-features">
-                    <li>✓ Fundos Ilimitados</li>
-                    <li>✓ Inteligencia Artificial</li>
-                    <li>✓ Usuarios ilimitados</li>
-                    <li>✓ Dashboard avanzado</li>
-                    <li>✓ Soporte 24/7</li>
-                </ul>
-                <a href="https://witty-coast-0b3ee6c0f.7.azurestaticapps.net/profile-access/register" class="btn-plan outline">Elegir Hacienda</a>
-            </div>
+            <ul class="plan-features">
+                <li>✓ 3 Fundos</li>
+                <li>✓ Integración IoT</li>
+                <li>✓ Reportes PDF</li>
+                <li>✓ Gestión Financiera</li>
+                <li>✓ Control de Inventario</li>
+            </ul>
+            <a href="https://buy.stripe.com/test_aFaaEWfHIfcl8ike8e6EU01" class="btn-plan primary" id="btn-cosecha">Elegir Cosecha</a>
         </div>
-    </section>
+        <div class="plan-card">
+            <div class="plan-header">
+                <span class="plan-icon">🏡</span>
+                <h3>Hacienda</h3>
+                <p class="plan-desc">Para grandes agroindustrias</p>
+            </div>
+            <div class="plan-price">
+                <span class="currency">S/.</span>
+                <span class="amount" id="price-hacienda">95</span>
+                <span class="period" id="period-hacienda">/mes</span>
+            </div>
+            <ul class="plan-features">
+                <li>✓ Fundos Ilimitados</li>
+                <li>✓ Inteligencia Artificial</li>
+                <li>✓ Usuarios ilimitados</li>
+                <li>✓ Dashboard avanzado</li>
+                <li>✓ Soporte 24/7</li>
+            </ul>
+            <a href="https://buy.stripe.com/test_eVq28q2UWc09buw2pw6EU02" class="btn-plan outline" id="btn-hacienda">Elegir Hacienda</a>
+        </div>
+    </div>
+</section>
 
     <section class="cta-section">
         <div class="cta-inner">
