@@ -35,3 +35,25 @@ document.querySelectorAll('.benefit-card').forEach(card => {
     card.style.transform = 'translateY(30px)';
     observer.observe(card);
 });
+
+const plans = {
+    mensual: {
+        semilla: { price: '20', period: '/mes', link: 'https://buy.stripe.com/test_8x2bJ00MO1lvaqs1ls6EU00' },
+        cosecha: { price: '45', period: '/mes', link: 'https://buy.stripe.com/test_aFaaEWfHIfcl8ike8e6EU01' },
+        hacienda: { price: '95', period: '/mes', link: 'https://buy.stripe.com/test_eVq28q2UWc09buw2pw6EU02' }
+    },
+    anual: {
+        semilla: { price: '200', period: '/año', link: 'https://buy.stripe.com/test_6oU14m1QSc09buwfci6EU03' },
+        cosecha: { price: '450', period: '/año', link: 'https://buy.stripe.com/test_fZucN41QS0hrgOQ0ho6EU04' },
+        hacienda: { price: '950', period: '/año', link: 'https://buy.stripe.com/test_9B63cufHI9S18ik7JQ6EU05' }
+    }
+};
+
+document.getElementById('billingToggle').addEventListener('change', function() {
+    const mode = this.checked ? 'anual' : 'mensual';
+    ['semilla', 'cosecha', 'hacienda'].forEach(plan => {
+        document.getElementById(`price-${plan}`).textContent = plans[mode][plan].price;
+        document.getElementById(`period-${plan}`).textContent = plans[mode][plan].period;
+        document.getElementById(`btn-${plan}`).href = plans[mode][plan].link;
+    });
+});
