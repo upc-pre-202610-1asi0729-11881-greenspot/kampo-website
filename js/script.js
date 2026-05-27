@@ -36,7 +36,6 @@ document.querySelectorAll('.benefit-card').forEach(card => {
     observer.observe(card);
 });
 
-<<<<<<< HEAD
 const translations = {
     es: {
         nav_beneficios: 'Beneficios',
@@ -135,4 +134,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
