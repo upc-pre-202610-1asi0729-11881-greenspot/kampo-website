@@ -12,23 +12,28 @@
 <body>
 
     <nav class="navbar" id="navbar">
-        <div class="nav-brand">
-            <span class="logo-icon">🌱</span>
-            <span class="logo-text">KAMPO</span>
+    <div class="nav-brand">
+        <span class="logo-icon">🌱</span>
+        <span class="logo-text">KAMPO</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+        <a href="https://witty-coast-0b3ee6c0f.7.azurestaticapps.net/profile-access/login" class="btn-login">Iniciar Sesión</a>
+        <a href="https://witty-coast-0b3ee6c0f.7.azurestaticapps.net/profile-access/register" class="btn-register">Registrarse</a>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <span>|</span>
+            <button class="lang-btn" data-lang="en">EN</button>
         </div>
-        <ul class="nav-links">
-            <li><a href="#beneficios">Beneficios</a></li>
-            <li><a href="#planes">Planes</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <div class="nav-actions">
-            <a href="https://witty-coast-0b3ee6c0f.7.azurestaticapps.net/profile-access/login" class="btn-login">Iniciar Sesión</a>
-            <a href="https://witty-coast-0b3ee6c0f.7.azurestaticapps.net/profile-access/register" class="btn-register">Registrarse</a>
-        </div>
-        <button class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
+    </div>
+    <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
 
     <div class="mobile-menu" id="mobileMenu">
         <a href="#beneficios" onclick="closeMobileMenu()">Beneficios</a>
