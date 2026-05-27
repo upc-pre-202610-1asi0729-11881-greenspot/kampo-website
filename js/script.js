@@ -128,11 +128,9 @@ function applyTranslations(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const langSwitcher = document.querySelector('.lang-switcher');
-    if (langSwitcher) {
-        langSwitcher.addEventListener('click', (e) => {
-            const btn = e.target.closest('.lang-btn');
-            if (btn) applyTranslations(btn.dataset.lang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            applyTranslations(btn.dataset.lang);
         });
-    }
+    });
 });
